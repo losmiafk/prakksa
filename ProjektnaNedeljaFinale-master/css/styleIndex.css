@@ -1,0 +1,404 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    padding: 50px;
+    background-color: #060606;
+    background-image: url('img/background.webp');
+    background-position: center;
+    background-size:cover ;
+    color: white;
+    /* box-shadow: rgba(0, 0, 0, 0.8) 0 0 0 10000px inset; */
+    transition: all .2s;
+}
+.wrapper-max{
+    /* background-color:black; */
+    padding-bottom: 30px;
+    max-width: 600px;
+    margin:auto;
+    position: relative;
+    border-radius: 10px;
+    transform-style: preserve-3d;
+}
+::-webkit-scrollbar {
+    width: 0px;
+  }
+::-webkit-scrollbar-thumb{
+    scrollbar-width: 0px;
+    color:#000;
+}
+h1{
+    text-align: center;
+    margin-bottom: 100px;
+
+}
+h2{
+    margin-bottom: 15px;
+    transform: translateZ(50px);
+}
+.logo{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.main-wrapper{
+    max-width: 550px;
+    margin: auto;
+    background-color: black;
+    border-radius: 1vw;
+    padding: 50px;
+    height: 100%;
+    position: relative;
+    transition: all 2s ease;
+}
+.loginForm{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+form div{
+    padding: 15px 0;
+    width: 100%;
+}
+ form div label {
+   display: block;
+   font-weight: bold; 
+   font-size: 16px;
+   padding:10px;
+} 
+form div input {
+    height: 50px;
+    width: 100%;
+    font-size: 18px;
+    padding: 0 10px;
+    background-color: inherit;
+    border:1px solid white;
+    border-radius: .8vw;
+    color:white;
+    transition: all .1s;
+}
+.main-wrapper input{
+    border-radius: 20px;
+}
+form div input::placeholder{
+    color:rgb(249, 249, 249,.8);
+    font-size: 16px;
+}
+form div input:active,form div input:focus-visible{
+    border:3px solid white;
+    outline: none;
+}
+
+form div button{
+    cursor: pointer;
+    padding: 10px 30px;
+    font-size: 18px;
+    color:white;
+    border:2px solid white;
+    border-radius: .2vw;
+    background-color: #13161c;
+}
+button{
+    cursor: pointer;
+    color:white;
+    border:2px solid white;
+    border-radius: .2vw;
+    background-color: #13161c;
+}
+form ul{
+    list-style: none;
+}
+form ul li{
+    color: red;
+}
+.no-acc-register{
+    text-align: center;
+    margin-top: 10px;
+    transform: translateZ(50px);
+}
+.no-acc-register button{
+    padding: 10px 10px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: -28px;
+    width:75%;
+    border-radius: 20px;
+    background-color: black;
+    font-weight: bold;
+    color: white;
+}
+.no-acc-register button:hover{
+    color: black;
+    background-color: white;
+}
+.no-acc-register p{
+    font-size: 19px;
+    margin-bottom: 25px;
+    color: gray;
+}
+body .registerContainer
+{
+    display:block;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: auto;
+    top:0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    transform-style: preserve-3d;
+    transform: translateZ(-1px) rotateY(180deg);
+}
+.loginContainer{
+    transform-style: preserve-3d;
+    transform: translateZ(1px);
+    z-index: 2;
+    /* animation: rotate 3s infinite; */
+}
+.loginContainer form{
+    transform: translateZ(50px);
+}
+.registerContainer form{
+    transform: translateZ(50px);
+}
+
+button#closeModal{
+    height: 20px;
+    width: 20px;
+    color: white;
+    background-color: transparent;
+    border: 0;
+    font-size: 25px;
+    font-weight: bold;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+}
+.inner-container{
+    border: 1px solid green;
+    padding: 15px;
+}
+.inner-container .left-side{
+    text-align: center;
+}
+.inner-container img.profile {
+    width: 70%;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+    border: 5px solid white;
+    margin-bottom:20px;
+}
+.inner-container.right-side form{
+    display: flex;
+    height: 100px;
+}
+.inner-container.right-side form textarea{
+    width: 85%;
+    border: 0;
+    padding: 10px;
+    resize: none;
+    outline-color: green;
+}
+.inner-container.right-side form button{
+    border: 0;
+    width: 15%;
+}
+#deleteProfile {
+    border: 2px solid red;
+    color: red;
+    padding: 5px 15px;
+}
+#allPostsWrapper .single-post {
+    background-color: #eaeaea;
+    padding: 15px;
+    margin-top: 15px;
+    color: #000;
+}
+#allPostsWrapper .single-post .post-content {
+    padding-bottom: 10px;
+    border-bottom: 1px solid black ;
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+#allPostsWrapper .single-post .post-actions{
+    display: flex;
+    justify-content: space-between;
+    color: grey;
+}
+#allPostsWrapper .single-post .post-actions div button.like-btn{
+    background-image: url(img/like.png);
+    padding: 5px 15px 5px 40px;
+    background-repeat: no-repeat;
+    background-position: 10px;
+    border: 0;
+}
+#allPostsWrapper .single-post .post-actions div button.comment-btn{
+    background-image: url(img/comment.png);
+    padding: 5px 15px 5px 40px;
+    background-repeat: no-repeat;
+    background-position: 10px;
+    border: 0;
+}
+#allPostsWrapper .single-post .post-actions div button.remove-btn{
+    border-color: red;
+    color: red;
+    padding: 5px 15px;
+}
+#allPostsWrapper .single-post .post-comments form{
+    height: 30px;
+    margin-top: 15px;
+}
+#allPostsWrapper .single-post .post-comments form input{
+    width: 85%;
+    padding: 0 10px;
+}
+#allPostsWrapper .single-post .post-comments form button{
+    width: 15%;
+    background-color: grey;
+}
+#allPostsWrapper .single-post .post-comments{
+    display: none;
+}
+#allPostsWrapper .single-post .post-comments .single-comment{
+    border: 1px dotted green;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+h2
+{
+    text-align: center;
+    padding: 25px 0px;
+}
+#drmrezatekst{
+    color: #4d547a;
+}
+#naslovind{
+    margin-bottom: 30px;
+    margin-top: -24px; 
+    font-family: 'Dancing Script', cursive;
+    font-size: 60px;
+    user-select: none;
+}
+button{
+    transition: .3s;
+}
+.main-wrapper button:hover{
+    background-color: black;
+    color: white;
+}
+.main-wrapper button{
+    background-color: white;
+    border-radius: 20px;
+    width: 100%;
+    font-weight: bold;
+    padding: 10px 10px;
+    margin-bottom: -74px;
+    color: black;
+}
+
+#ulg{
+   margin-bottom: 12px;
+   color: grey;
+   text-align: center;
+}
+#logint{
+    margin-bottom: -15px;
+    margin-top: -40px;
+}
+#rlg{
+    margin-bottom: 12px;
+    margin-top: -30px;
+    color: grey;
+    text-align: center;
+}
+#login_lozinka{
+    margin-bottom: 20px;
+}
+#loginForm input{
+    padding-left: 20px;
+}
+#registrationForm input{
+    padding-left: 20px;
+}
+
+#particles-js{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+
+
+
+@media only screen and (max-width: 425px) and (min-width: 320px)
+{
+    #naslovind{
+        font-size: 45px;
+    }
+    #drmr{
+        font-size: 17px;
+        padding-top: 0px;
+    }
+    .main-wrapper{
+        border: none;
+        width: 100%;
+        padding: 20px;
+        background-color: black;
+    }
+    .main-wrapper input{
+        border-radius: 20px;
+        padding-left: 15px;
+    }
+    .main-wrapper button{
+        background-color: white;
+        color: black;
+        font-weight: bolder;
+        border-radius: 20px;
+        padding:10px 40px;
+        width: 100%;
+        margin-bottom: -15px;
+    }
+    .no-acc-register button{
+        margin-top: -100px;
+        background-color: transparent;
+        color: white;
+        border-radius: 20px;
+        padding:10px 40px;
+        width: 88%;
+    }
+    #orspan
+    {
+        margin-top: 25px;
+        margin-bottom: -35px;
+        text-align: center;
+        color: gray;
+    }
+    body{
+        box-shadow:none;
+        background-color: black;
+        /* #060606  */
+    }
+    #rlg{
+        margin-bottom: 12px;
+        margin-top: -30px;
+        color: grey;
+        text-align: center;
+    }
+    .no-acc-register button{
+        width: 100%;
+     }
+}
+@media only screen and (max-width: 320px){
+    .no-acc-register button{
+       padding: 10px 10px;
+       width: 100%;
+    }
+    #btn{
+        padding: 10px 10px;
+    }
+}
